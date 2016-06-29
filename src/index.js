@@ -15,7 +15,7 @@ var text = new fabric.Text('regularアイウエオ aaa', {
 });
 canvas.add(text);
 
-var out = fs.createWriteStream(__dirname + '/../out/out_' + new Date().getTime() + '.png');
+var out = fs.createWriteStream(__dirname + '/../tmp/out_' + new Date().getTime() + '.png');
 var stream = canvas.createPNGStream();
 stream.on('data', function(chunk) {
     out.write(chunk);

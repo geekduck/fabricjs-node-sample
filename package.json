@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "exec": "node src/index.js",
-    "watch": "watch 'npm run exec' src",
+    "exec": "/usr/bin/time -p node src/index.js",
+    "imgcat": "imgcat tmp/out.png",
+    "watch": "watch 'npm run exec && npm run imgcat' src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "fabric": "^1.6.0"
+    "fabric": "^1.6.0",
+    "jsdom": "^9.3.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "watch": "^0.19.1"
